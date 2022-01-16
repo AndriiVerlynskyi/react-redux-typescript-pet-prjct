@@ -1,0 +1,62 @@
+{
+    "navBarItems": {
+        "customerTier": "premium",
+        "navItemsList": [
+            {
+            "navTitle": "GENERAL",
+            "listElements": [{
+                "title": "Overview",
+                "icon": "home",
+                "isNew": false
+            },
+            {
+                "title": "Analytics",
+                "icon": "charts",
+                "isNew": false
+            },
+            {
+                "title": "Finance",
+                "icon": "cirleCharts",
+                "isNew": false
+            },
+            {
+                "title": "Logistics",
+                "icon": "lorry",
+                "isNew": true
+            },
+            {
+                "title": "Account",
+                "icon": "Profile",
+                "isNew": false
+            }
+            ]
+        },
+        {
+            "navTitle": "MANAGEMENT",
+            "listElements": [{
+                "title": "Customer",
+                "icon": "home",
+                "isNew": false,
+                "dropdownElementsList":["list", "details", "edit"]
+            },
+            {
+                "title": "Analytics",
+                "icon": "charts",
+                "isNew": false
+            },
+            {
+                "title": "Finance",
+                "icon": "cirleCharts",
+                "isNew": false,
+                "dropdownElementsList":["list", "create"]
+            },
+            {
+                "title": "Logistics",
+                "icon": "lorry",
+                "isNew": false
+            }
+            ]
+        }
+        ]
+    }
+}
