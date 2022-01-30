@@ -10,6 +10,7 @@ export interface INavItemsList {
 
 export interface INavButtonProps {
     title: string,
+    icon: string,
     isNew: boolean
 }
 
@@ -20,14 +21,6 @@ export interface INavBar {
 
 export interface navBarState {
     pending: boolean,
-    navBar: INavBar,
+    navBarData: INavBar,
     error: string | null
-}
-
-export interface FetchNavBarDataSuccessPayload {
-    error: string
-}
-
-export interface FetchNavBarDataFailurePayload{
-    error: string
 }

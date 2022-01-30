@@ -1,1 +1,1 @@
-export * from './navBarActions';
+export * from './getNavBarDataActions';

@@ -1,7 +1,5 @@
 import axios from 'axios';
-import { navBarUrl } from "../../../../back/routes";
 
-export function getNavBarData () {
-    console.log(' function is called:', axios(navBarUrl))
+export function getNavBarData (navBarUrl: string) {
     return axios(navBarUrl)
 }

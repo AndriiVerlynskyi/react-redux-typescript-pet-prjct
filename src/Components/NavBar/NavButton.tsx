@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/material/styles';
-import { INavButtonProps } from '../../types/inavBar'
+import { INavButtonProps } from '../../types/InavBar';
 
 import Button from '@mui/material/Button';
 import NewFeatureFlag from '../General/NewFeatureFlag';

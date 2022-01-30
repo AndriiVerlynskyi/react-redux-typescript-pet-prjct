@@ -1,4 +1,4 @@
-import { INavBar } from "../../types/inavBar";
+import { INavBar } from "../../types/InavBar";
 
 export interface IRootState {
     router: any,
