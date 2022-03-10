@@ -4,7 +4,7 @@ import { navBarReducer } from '../reducers/navBarReducer'
 
 const rootReducer = combineReducers({
     router: routerReducer,
-    navBar: navBarReducer
+    navBarData: navBarReducer
 })
 
 export type AppState = ReturnType<typeof rootReducer>

@@ -1,6 +1,7 @@
+import { IRouter } from "../../types/router";
 import { INavBar } from "../../types/InavBar";
 
 export interface IRootState {
-    router: any,
+    router: IRouter,
     navBar: INavBar
 }

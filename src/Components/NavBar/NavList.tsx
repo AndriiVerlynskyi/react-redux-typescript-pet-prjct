@@ -1,11 +1,12 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
-import { INavItemsList, INavButtonProps } from '../../types/InavBar';
+import { INavItemsList, INavButton } from '../../types/InavBar';
+import NavButton from './NavButton';
+import NavButtonWithCollapse from './NavButtonWithCollapse';
 
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem'
-import NavButton from './NavButton';
 
 
 interface INavListProps {
@@ -27,18 +28,25 @@ const StyledListItemTitle = styled(ListItem)( ({theme}) => ({
     padding: '0px'
 }))
 
-const NavList: React.FC <INavListProps> = (props) => {
+const NavList: React.FC <INavListProps> = ({ navItem }) => {
 
-    console.log(props)
     return (
         <List>
-            <StyledListItemTitle>{props.navItem.navTitle}</StyledListItemTitle>
-            {props.navItem.listElements.map( (navButtonItem : INavButtonProps) => {
-                    return (
+            <StyledListItemTitle>{navItem.navTitle}</StyledListItemTitle>
+            {navItem.listElements.map( (navButtonItem : INavButton) => {
+                if (navButtonItem.withCollapseWrapper) {
+                    return(
+                    <StyledListItemBtn key={navButtonItem.title}>
+                        <NavButtonWithCollapse navButtonItem={navButtonItem} />
+                    </StyledListItemBtn>
+                    )
+                } else {
+                    return(
                         <StyledListItemBtn key={navButtonItem.title}>
-                            <NavButton title={navButtonItem.title} isNew={navButtonItem.isNew} icon={navButtonItem.icon}/>
+                            <NavButton navButtonItem={navButtonItem} />
                         </StyledListItemBtn>
                     )
+                }
                 })
             }
         </List>

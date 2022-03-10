@@ -6,7 +6,7 @@ enum Type {
 }
 
 const requestNavBarData = createAction(Type.REQUEST_NAV_BAR_DATA);
-const recieveNavBarData = createAction(Type.RECEIVE_NAV_BAR_DATA);
+const recieveNavBarData = createAction(Type.RECEIVE_NAV_BAR_DATA)
 
 
 export const NavBarActions = {

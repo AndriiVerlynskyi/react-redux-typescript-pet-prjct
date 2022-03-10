@@ -1,10 +1,8 @@
 import * as React from 'react';
 import './App.css';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import MainRouter from './router';
 
-import Grid from '@mui/material/Grid'
-import NavBar from './Components/NavBar/NavBar';
-import Home from './Pages/Home/Home';
 
 const theme = createTheme({
   palette: {
@@ -30,14 +28,52 @@ const theme = createTheme({
       '"Segoe UI Emoji"',
       '"Segoe UI Symbol"',
     ].join(','),
+  },
+  components:{
+    MuiCssBaseline: {
+      styleOverrides:{
+        scrollBehavior: 'smooth',
+        scrollbarWidth: 'thin',
+        scrollbarColor: '#17171a transparent',
+        '&::-webkit-scrollbar': {
+          width: 10,
+          height: 3,
+          backgroundColor: 'transparent',
+        },
+        '&::-webkit-scrollbar-track': {
+          backgroundColor: 'transparent',
+        },
+        '&::-webkit-scrollbar-thumb': {
+          borderRadius: 3,
+          backgroundColor: '#17171a',
+          minHeight: 10,
+          minWidth: 10,
+        },
+        '&::-webkit-scrollbar-thumb:focus': {
+          backgroundColor: '#17171a',
+        },
+        '&::-webkit-scrollbar-thumb:active': {
+          backgroundColor: '#17171a',
+        },
+        '&::-webkit-scrollbar-thumb:hover': {
+          backgroundColor: '#17171a',
+        },
+        '&::-webkit-scrollbar-corner': {
+          backgroundColor: 'transparent',
+        }
+      }
+    }
   }
 })
 
+// export type ThemeTypes 
+
 const App: React.FC = () => {
+  
   
   return (
     <ThemeProvider theme={theme}>
-      <Home/>
+      <MainRouter/>
     </ThemeProvider>
   );
 }

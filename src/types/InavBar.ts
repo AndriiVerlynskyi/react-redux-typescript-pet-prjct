@@ -1,21 +1,33 @@
-export interface INavItemsList {
-    navTitle: string,
-    listElements: {
+export interface INavButtonProps {
+    navButtonItem:{
         title: string,
         icon: string,
         isNew: boolean,
-        dropdownElementsList?: string[]
-    }[]
+        withCollapseWrapper: boolean,
+        dropdownElementsList: string[]
+    }
 }
 
-export interface INavButtonProps {
+export interface dropdownElementsList {
+    dropdownElementName: string,
+    dropdownElementLink: string
+}
+
+export interface INavButton {
     title: string,
     icon: string,
-    isNew: boolean
+    link: string,
+    isNew: boolean,
+    withCollapseWrapper: boolean,
+    dropdownElementsList: dropdownElementsList[]
+}
+
+export interface INavItemsList {
+    navTitle: string,
+    listElements: INavButton[]
 }
 
 export interface INavBar {
-    customerTier: string,
     navItemsList: INavItemsList[]
 }
 

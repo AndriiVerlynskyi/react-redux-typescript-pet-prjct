@@ -1,5 +1,5 @@
-import { handleActions, ReducerMap } from 'redux-actions';
-import { INavBar, navBarState } from '../../types/InavBar';
+import { handleActions } from 'redux-actions';
+import { INavBar } from '../../types/InavBar';
 import { NavBarActions } from '../actions';
 
 // const initialState: INavBar= {

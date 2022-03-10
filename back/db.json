@@ -1,33 +1,42 @@
 {
-    "navBar": {
-        "customerTier": "premium",
+    "navBarData": {
         "navItemsList": [
             {
             "navTitle": "GENERAL",
             "listElements": [{
                 "title": "Overview",
+                "link": "/",
                 "icon": "home",
-                "isNew": false
+                "isNewFeature": false,
+                "withCollapseWrapper": false
             },
             {
                 "title": "Analytics",
+                "link": "/",
                 "icon": "charts",
-                "isNew": false
+                "isNewFeature": false,
+                "withCollapseWrapper": false
             },
             {
                 "title": "Finance",
+                "link": "/",
                 "icon": "cirleCharts",
-                "isNew": false
+                "isNewFeature": false,
+                "withCollapseWrapper": false
             },
             {
                 "title": "Logistics",
+                "link": "/",
                 "icon": "lorry",
-                "isNew": true
+                "isNewFeature": true,
+                "withCollapseWrapper": false
             },
             {
                 "title": "Account",
+                "link": "/LogIn",
                 "icon": "Profile",
-                "isNew": false
+                "isNewFeature": false,
+                "withCollapseWrapper": false
             }
             ]
         },
@@ -35,25 +44,54 @@
             "navTitle": "MANAGEMENT",
             "listElements": [{
                 "title": "Customer",
+                "link": "/",
                 "icon": "home",
-                "isNew": false,
-                "dropdownElementsList":["list", "details", "edit"]
+                "isNewFeature": false,
+                "withCollapseWrapper": true,
+                "dropdownElementsList":[
+                    {
+                        "dropdownElementName": "list",
+                        "dropdownElementLink": "/"
+                    },
+                    {
+                        "dropdownElementName": "details",
+                        "dropdownElementLink": "/"
+                    },
+                    {
+                        "dropdownElementName": "edit",
+                        "dropdownElementLink": "/"
+                    }
+                ]
             },
             {
                 "title": "Analytics",
+                "link": "/",
                 "icon": "charts",
-                "isNew": false
+                "isNewFeature": false,
+                "withCollapseWrapper": false
             },
             {
                 "title": "Finance",
+                "link": "/",
                 "icon": "cirleCharts",
-                "isNew": false,
-                "dropdownElementsList":["list", "create"]
+                "isNewFeature": false,
+                "withCollapseWrapper": true,
+                "dropdownElementsList":[
+                    {
+                        "dropdownElementName": "list",
+                        "dropdownElementLink": "/"
+                    }, 
+                    {
+                        "dropdownElementName": "create",
+                        "dropdownElementLink": "/"
+                    }]
             },
             {
                 "title": "Logistics",
+                "link": "/",
                 "icon": "lorry",
-                "isNew": false
+                "isNewFeature": false,
+                "withCollapseWrapper": false
             }
             ]
         }
